@@ -1,6 +1,5 @@
 package Chapter01._1_1;
 
-import Chapter01._1_2.NUserDao;
 import Chapter01._1_3.SimpleConnectionMaker;
 
 import java.sql.*;
@@ -50,19 +49,5 @@ public abstract class UserDao {
 
 	public abstract Connection getConnection() throws ClassNotFoundException, SQLException;
 
-	public static void main(String[] args) throws SQLException, ClassNotFoundException {
-		NUserDao dao = new NUserDao();
-		User user = new User();
-		user.setId("hong");
-		user.setName("홍길동");
-		user.setPassword("1234");
-		dao.add(user);
-		System.out.println(user.getId() + " 등록 성공");
-
-		User user2 = dao.get(user.getId());
-		System.out.println(user2.getName());
-		System.out.println(user2.getPassword());
-		System.out.println(user2.getId() + " 조회 성공");
-	}
 
 }
