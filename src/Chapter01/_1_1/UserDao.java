@@ -1,19 +1,24 @@
 package Chapter01._1_1;
 
 import Chapter01._1_2.NUserDao;
+import Chapter01._1_3.ConnectionMaker;
+import Chapter01._1_3.DConnectionMaker;
 import Chapter01._1_3.SimpleConnectionMaker;
 
 import java.sql.*;
 
 public abstract class UserDao {
 	private SimpleConnectionMaker simpleConnectionMaker;
+	private ConnectionMaker connectionMaker;
 
 	public UserDao(){
-		simpleConnectionMaker = new SimpleConnectionMaker();
+		// simpleConnectionMaker = new SimpleConnectionMaker();
+		connectionMaker = new DConnectionMaker(); // 근데 여기서 클래스 이름이 나온다. 문제발생
 	}
 	public void add(User user) throws ClassNotFoundException, SQLException {
 
-		Connection c = simpleConnectionMaker.makeNewConnection();
+		//Connection c = simpleConnectionMaker.makeNewConnection();
+		Connection c = connectionMaker.makeConnection();
 
 		PreparedStatement ps = c.prepareStatement(
 				"insert into users(id, name, password) values(?, ?, ?)");
