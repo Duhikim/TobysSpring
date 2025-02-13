@@ -2,7 +2,6 @@ package Chapter01._1_3;
 
 import Chapter01._1_1.User;
 import Chapter01._1_1.UserDao;
-import Chapter01._1_2.NUserDao;
 
 import java.sql.SQLException;
 
