@@ -1,10 +1,10 @@
-package main.java.com.example.project.config;
+package com.example.project.config;
 
-import main.java.com.example.project.dao.AccountDao;
-import main.java.com.example.project.dao.MessageDao;
-import main.java.com.example.project.dao.UserDao;
-import main.java.com.example.project.dao.ConnectionMaker;
-import main.java.com.example.project.dao.DConnectionMaker;
+import com.example.project.dao.AccountDao;
+import com.example.project.dao.MessageDao;
+import com.example.project.dao.UserDao;
+import com.example.project.dao.ConnectionMaker;
+import com.example.project.dao.DConnectionMaker;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

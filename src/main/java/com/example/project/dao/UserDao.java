@@ -1,6 +1,6 @@
-package main.java.com.example.project.dao;
+package com.example.project.dao;
 
-import main.java.com.example.project.domain.User;
+import com.example.project.domain.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,9 +9,9 @@ import java.sql.SQLException;
 
 public class UserDao {
 	// private SimpleConnectionMaker simpleConnectionMaker;
-	private ConnectionMaker connectionMaker;
+	private com.example.project.dao.ConnectionMaker connectionMaker;
 
-	public UserDao(ConnectionMaker connectionMaker){
+	public UserDao(com.example.project.dao.ConnectionMaker connectionMaker){
 		// simpleConnectionMaker = new SimpleConnectionMaker();
 		// connectionMaker = new DConnectionMaker(); // 근데 여기서 클래스 이름이 나온다. 문제발생
 		this.connectionMaker = connectionMaker;

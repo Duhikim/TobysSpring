@@ -23,7 +23,7 @@ public class UserDaoTest {
 		// NUserDao dao = new NUserDao();
 		User user = new User();
 		user.setId("hong");
-		user.setName("홍길동");
+		user.setName("Hong Gildong");
 		user.setPassword("1234");
 		dao.add(user);
 		System.out.println(user.getId() + " 등록 성공");

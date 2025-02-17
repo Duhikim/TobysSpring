@@ -1,4 +1,4 @@
-package main.java.com.example.project.domain;
+package com.example.project.domain;
 
 public class User {
 	String id;
