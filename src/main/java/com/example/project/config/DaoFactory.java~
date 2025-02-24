@@ -25,7 +25,6 @@ public class DaoFactory {
 	}
 
 	// 제어의 역전(IoC). Dao에서는 ConnectionMaker 객체를 생성하지 않는다.
-	@Bean
 	public ConnectionMaker connectionMaker(){
 		return new DConnectionMaker();
 	}
